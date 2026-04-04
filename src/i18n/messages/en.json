@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "soluciones": "Solutions",
+    "marcas": "Brands",
+    "blog": "Blog",
+    "quienesSomos": "About Us",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "title": "Feel the Magic of Technology in Your Home",
+    "subtitle": "You're one step away from your smart home...",
+    "cta": "Contact Us",
+    "ctaForm": "Questionnaire"
+  },
+  "solutions": {
+    "sectionTitle": "Solutions",
+    "sectionSubtitle": "We transform spaces into smart experiences",
+    "ingenieria": {
+      "title": "Blueprint Engineering",
+      "description": "We are experts in Project Engineering to improve the Quality standard of the projects we work on.",
+      "fullContent": "At TechVibes we are experts in Project Engineering to improve the Quality standard of the projects we work on.\n\nWhy is Home Automation Engineering important?\n\n1. Comprehensive design from the start\nIt allows coordination from the beginning of the necessary infrastructure (conduits, trays, technical spaces) with architects, civil and electrical engineers.\n\nWe design developments thought for current and future technologies, avoiding subsequent works or modifications."
+    },
+    "domotica": {
+      "title": "Home Automation",
+      "description": "Automation and centralized control of home systems from an app, tablet or voice control.",
+      "fullContent": "Home automation allows automating and centralizing the control of the different systems in the home, from an app or remote control (cell phone, tablet, voice control, Alexa, Google Home, etc). This provides comfort, security, energy efficiency and a fully personalized experience that includes Design, installation, configuration, support and after-sales service.\n\nUnlike IOT (Internet of Things) systems, professional home automation has proactive monitoring of installed products, personalized after-sales service and constant system updates.\n\nThe service that TechVibes offers is not just product installation, but an immersive experience and the advantage that technology offers us to live better.\n\nWe invite you to our showroom so you can experience it for yourself."
+    },
+    "red": {
+      "title": "Network / WiFi",
+      "description": "Limitless connectivity. WiFi networks and telecommunications with total coverage and high speed.",
+      "fullContent": "Limitless connectivity with Techvibes\n\nAt Techvibes we design and implement WiFi networks and telecommunications solutions designed to provide total coverage, high speed and maximum stability. Whether in homes, offices or commercial spaces, we optimize each installation to guarantee an efficient, secure and uninterrupted connection.\n\nWe use state-of-the-art technology and carry out personalized studies to ensure that each environment has a powerful and constant signal, even in complex or large spaces.\n\nTrust Techvibes to keep you always connected, with expert technical support that accompanies every stage of the project and its maintenance."
+    },
+    "seguridad": {
+      "title": "Security",
+      "description": "Smart security with alarms, HD cameras and digital locks controlled from your phone.",
+      "fullContent": "Smart security with Techvibes\n\nAt Techvibes we protect what matters most to you by integrating modern and efficient security systems. We install smart alarms, high-definition surveillance cameras and digital locks that you can control from your phone, wherever you are.\n\nOur solutions adapt to homes, offices and businesses, and can be integrated with home automation systems for centralized and automated management. Each installation is carried out by professionals with extensive experience, guaranteeing quality, reliability and continuous technical support.\n\nWith Techvibes, security is smart, accessible and always under your control."
+    },
+    "soporte": {
+      "title": "Technical Support",
+      "description": "Over 10 years of experience. On-site and remote assistance with active technical on-call service.",
+      "fullContent": "Specialized Technical Support\n\nAt Techvibes we not only install cutting-edge technology, we also guarantee its optimal performance over time. We have a highly trained technical team with over 10 years of experience in home automation, professional audio systems and telecommunications.\n\nWe provide both on-site and remote assistance, adapting to each client's needs. Our online service allows us to resolve issues quickly, and our active technical on-call service ensures priority attention according to the contracted subscription level.\n\nWith Techvibes, the peace of mind of having experts available when you need them is part of the service.\n\nFor more information contact us at info@techvibes.com.ar"
+    },
+    "audioVideo": {
+      "title": "Audio & Video",
+      "description": "Home Cinema and Multiroom Audio. Surround sound and music in every room of your house.",
+      "fullContent": "Live the Techvibes experience: Home Cinema and Multiroom Audio\n\nAt Techvibes we transform your home into a smart space where technology integrates elegantly and functionally. With our Home Cinema system, we bring the cinema experience to your living room: surround sound, high-definition images and total automation so you just have to sit back and enjoy.\n\nAdditionally, with our multiroom audio solutions, every room comes alive. Listen to your favorite music throughout the house or choose different content for each space, all controlled from an intuitive app or voice commands.\n\nChoose Techvibes and turn your home into a more comfortable, modern and connected place."
+    }
+  },
+  "showroom": {
+    "sectionTitle": "Our Showrooms",
+    "canning": {
+      "title": "Canning Showroom",
+      "address": "Mariano Castex 3869, B1801DHJ Canning, Buenos Aires Province",
+      "detail": "Del Rio Servicios Canning - 1st Floor"
+    },
+    "sanIsidro": {
+      "title": "San Isidro Showroom",
+      "address": "Av. del Libertador 16603, B1642 San Isidro, Buenos Aires Province",
+      "detail": "Patagonia Flooring San Isidro"
+    }
+  },
+  "brands": {
+    "sectionTitle": "Brands",
+    "subtitle": "The best brands with direct distribution in Argentina and USA accompany us"
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "subtitle": "Technology lovers with over 100 homes completed",
+    "description": "Techvibes is a company made up of a group of technology lovers, with over 100 homes completed. The best brands with direct distribution in Argentina and USA accompany us.\n\nWe are experts in Home Automation, Distributed Audio and Networks, technicians with over 10 years of experience in the field.\n\nWe design developments thought for current and future technologies, avoiding subsequent works or modifications.\n\nOur mission is to provide Project Engineering solutions, offering constant technological innovation in the home and businesses.\n\nOur systems connect smart devices to work in harmony. Your life simpler, more comfortable and always under control.",
+    "email": "info@techvibes.com.ar",
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "Constant technological innovation in the home and businesses."
+      },
+      {
+        "title": "Experience",
+        "description": "Over 10 years of experience in home automation, professional audio and telecommunications."
+      },
+      {
+        "title": "Quality",
+        "description": "We design developments thought for current and future technologies, avoiding subsequent works."
+      },
+      {
+        "title": "+100 Homes",
+        "description": "Over 100 homes transformed into smart spaces."
+      }
+    ]
+  },
+  "features": {
+    "sectionTitle": "Our Services",
+    "items": [
+      {
+        "title": "Engineering & Project Design",
+        "description": "Integral design coordinated with architects and engineers."
+      },
+      {
+        "title": "Own & Factory Warranty",
+        "description": "We back every installation with full warranty."
+      },
+      {
+        "title": "Professional Technical Support",
+        "description": "Specialized technical service with active on-call shifts."
+      },
+      {
+        "title": "Audio Home Theater & Multiroom",
+        "description": "Cinema experience in your home with surround sound."
+      },
+      {
+        "title": "Training",
+        "description": "Continuous training in the latest technologies."
+      },
+      {
+        "title": "International Logistics Consulting",
+        "description": "Direct import from USA and local distribution."
+      },
+      {
+        "title": "WiFi & Telecommunications",
+        "description": "Total coverage with state-of-the-art technology."
+      },
+      {
+        "title": "Product Catalog",
+        "description": "Premium selection of the best brands."
+      },
+      {
+        "title": "JIT Delivery Times",
+        "description": "Just In Time delivery to optimize your project."
+      },
+      {
+        "title": "Argentina HQ & Miami Warehouse",
+        "description": "Local presence with international stock."
+      }
+    ]
+  },
+  "footer": {
+    "description": "We transform your home into a smart, connected and secure space.",
+    "solutions": "Solutions",
+    "company": "Company",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved."
+  },
+  "cta": {
+    "title": "Would you like to turn your house into a smart home?",
+    "subtitle": "We have a team of experts who look for specific solutions for each home.",
+    "button": "Contact Us on WhatsApp"
+  },
+  "blog": {
+    "sectionTitle": "Blog",
+    "subtitle": "News, trends and tips about home technology",
+    "readMore": "Read more"
+  },
+  "catalog": {
+    "title": "Product Catalog",
+    "subtitle": "Explore our selection of premium products"
+  }
+}

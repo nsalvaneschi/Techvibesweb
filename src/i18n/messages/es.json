@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "soluciones": "Soluciones",
+    "marcas": "Marcas",
+    "blog": "Blog",
+    "quienesSomos": "Quiénes Somos",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "title": "Siente la Magia de la Tecnología en tu Hogar",
+    "subtitle": "Estás a un paso de tu casa inteligente...",
+    "cta": "Contactanos",
+    "ctaForm": "Cuestionario"
+  },
+  "solutions": {
+    "sectionTitle": "Soluciones",
+    "sectionSubtitle": "Transformamos espacios en experiencias inteligentes",
+    "ingenieria": {
+      "title": "Ingeniería de Planos",
+      "description": "Somos expertos en Ingeniería de Proyectos para mejorar el estándar de Calidad de las obras que nos contratan.",
+      "fullContent": "En TechVibes somos expertos en Ingeniería de Proyectos para mejorar el estándar de Calidad de las obras que nos contratan.\n\n¿Por qué es importante una ingeniería Domótica?\n\n1. Diseño integral desde el inicio\nPermite coordinar desde el principio la infraestructura necesaria (cañerías, bandejas, espacios técnicos) con los arquitectos, ingenieros civiles y eléctricos.\n\nDiseñamos desarrollos pensados para las tecnologías actuales y futuras, evitando obras o modificaciones posteriores."
+    },
+    "domotica": {
+      "title": "Domótica",
+      "description": "Automatización y control centralizado de los sistemas del hogar desde una app, tablet o control por voz.",
+      "fullContent": "La domótica permite automatizar y centralizar el control de los distintos sistemas del hogar, desde una app o control remoto (celular, tablet, control por voz, Alexa, Google Home, etc). Esto brinda comodidad, seguridad, eficiencia energética y una experiencia totalmente personalizada que incluye Diseño, instalación, configuración, soporte y post-venta.\n\nA diferencia de los sistemas IOT (Internet of Things), la domótica profesional cuenta con un seguimiento proactivo de los productos instalados, post venta personalizado y actualizaciones constantes del sistema.\n\nEl servicio que TechVibes ofrece, no es solo instalación de productos, sino una experiencia inmersiva y la ventaja que la tecnología nos brinda para vivir mejor.\n\nTe invitamos a nuestro showroom para que vivas la experiencia por vos mismo."
+    },
+    "red": {
+      "title": "Red / WIFI",
+      "description": "Conectividad sin límites. Redes WiFi y telecomunicaciones con cobertura total y alta velocidad.",
+      "fullContent": "Conectividad sin límites con Techvibes\n\nEn Techvibes diseñamos e implementamos redes WiFi y soluciones de telecomunicaciones pensadas para brindar cobertura total, alta velocidad y máxima estabilidad. Ya sea en hogares, oficinas o espacios comerciales, optimizamos cada instalación para garantizar una conexión eficiente, segura y sin interrupciones.\n\nUtilizamos tecnología de última generación y realizamos estudios personalizados para asegurar que cada ambiente cuente con señal potente y constante, incluso en espacios complejos o de gran tamaño.\n\nConfía en Techvibes para mantenerte siempre conectado, con un soporte técnico experto que acompaña cada etapa del proyecto y su mantenimiento."
+    },
+    "seguridad": {
+      "title": "Seguridad",
+      "description": "Seguridad inteligente con alarmas, cámaras HD y cerraduras digitales controladas desde tu celular.",
+      "fullContent": "Seguridad inteligente con Techvibes\n\nEn Techvibes protegemos lo que más te importa integrando sistemas de seguridad modernos y eficientes. Instalamos alarmas inteligentes, cámaras de videovigilancia de alta definición y cerraduras digitales que podés controlar desde tu celular, estés donde estés.\n\nNuestras soluciones se adaptan a hogares, oficinas y comercios, y pueden integrarse a sistemas de domótica para una gestión centralizada y automatizada. Cada instalación es realizada por profesionales con amplia experiencia, garantizando calidad, confiabilidad y soporte técnico continuo.\n\nCon Techvibes, la seguridad es inteligente, accesible y siempre está bajo tu control."
+    },
+    "soporte": {
+      "title": "Soporte Técnico",
+      "description": "Más de 10 años de experiencia. Asistencia presencial y remota con guardias técnicas activas.",
+      "fullContent": "Soporte Técnico Especializado\n\nEn Techvibes no solo instalamos tecnología de vanguardia, también garantizamos su funcionamiento óptimo a lo largo del tiempo. Contamos con un equipo técnico altamente capacitado, con más de 10 años de experiencia en domótica, sistemas de audio profesional y telecomunicaciones.\n\nBrindamos asistencia tanto presencial como remota, adaptándonos a las necesidades de cada cliente. Nuestro servicio online permite resolver inconvenientes de forma ágil, y nuestras guardias técnicas activas aseguran atención prioritaria según el nivel de suscripción contratado.\n\nCon Techvibes, la tranquilidad de tener expertos disponibles cuando los necesitás es parte del servicio.\n\nPara más información contactanos a info@techvibes.com.ar"
+    },
+    "audioVideo": {
+      "title": "Audio & Video",
+      "description": "Home Cinema y Audio Multiroom. Sonido envolvente y música en cada ambiente de tu casa.",
+      "fullContent": "Vivir la experiencia Techvibes: Home Cinema y Audio Multiroom\n\nEn Techvibes transformamos tu hogar en un espacio inteligente donde la tecnología se integra de forma elegante y funcional. Con nuestro sistema de Home Cinema, llevamos la experiencia del cine a tu living: sonido envolvente, imágenes de alta definición y automatización total para que solo tengas que sentarte y disfrutar.\n\nAdemás, con nuestras soluciones de audio multiroom, cada ambiente cobra vida. Escuchá tu música favorita en toda la casa o elegí contenidos diferentes para cada espacio, todo controlado desde una app intuitiva o mediante comandos de voz.\n\nElegí Techvibes y convertí tu hogar en un lugar más confortable, moderno y conectado."
+    }
+  },
+  "showroom": {
+    "sectionTitle": "Nuestros Showrooms",
+    "canning": {
+      "title": "Showroom Canning",
+      "address": "Mariano Castex 3869, B1801DHJ Canning, Provincia de Buenos Aires",
+      "detail": "Del Rio Servicios Canning - 1° Piso"
+    },
+    "sanIsidro": {
+      "title": "Showroom San Isidro",
+      "address": "Av. del Libertador 16603, B1642 San Isidro, Provincia de Buenos Aires",
+      "detail": "Patagonia Flooring San Isidro"
+    }
+  },
+  "brands": {
+    "sectionTitle": "Marcas",
+    "subtitle": "Nos acompañan las mejores marcas con distribución directa en Argentina y USA"
+  },
+  "about": {
+    "sectionTitle": "Quiénes Somos",
+    "subtitle": "Amantes de la tecnología con +100 casas realizadas",
+    "description": "Techvibes es una empresa constituída por un grupo de amantes de la tecnología, con más de 100 casas realizadas. Nos acompañan las mejores marcas con distribución directa en Argentina y USA.\n\nSomos expertos en Domótica, Audio Distribuido y Redes, técnicos con más de 10 años de experiencia en el rubro.\n\nDiseñamos desarrollos pensados para las tecnologías actuales y futuras, evitando obras o modificaciones posteriores.\n\nNuestra misión es brindar soluciones de Ingeniería de proyectos, ofreciendo constante innovación tecnológica en el hogar y empresas.\n\nNuestros sistemas conectan dispositivos inteligentes para que funcionen en armonía. Tu vida más simple, confortable y siempre bajo control.",
+    "email": "info@techvibes.com.ar",
+    "values": [
+      {
+        "title": "Innovación",
+        "description": "Constante innovación tecnológica en el hogar y empresas."
+      },
+      {
+        "title": "Experiencia",
+        "description": "Más de 10 años de experiencia en domótica, audio profesional y telecomunicaciones."
+      },
+      {
+        "title": "Calidad",
+        "description": "Diseñamos desarrollos pensados para las tecnologías actuales y futuras, evitando obras posteriores."
+      },
+      {
+        "title": "+100 Casas",
+        "description": "Más de 100 hogares transformados en espacios inteligentes."
+      }
+    ]
+  },
+  "features": {
+    "sectionTitle": "Nuestros Servicios",
+    "items": [
+      {
+        "title": "Ingeniería & Diseño de Proyectos",
+        "description": "Diseño integral coordinado con arquitectos e ingenieros."
+      },
+      {
+        "title": "Garantía Propia & de Fábrica",
+        "description": "Respaldamos cada instalación con garantía completa."
+      },
+      {
+        "title": "Soporte Técnico Profesional",
+        "description": "Servicio técnico especializado con guardias activas."
+      },
+      {
+        "title": "Audio Home Theater & Multiroom",
+        "description": "Experiencia de cine en tu hogar con sonido envolvente."
+      },
+      {
+        "title": "Capacitación",
+        "description": "Formación continua en las últimas tecnologías."
+      },
+      {
+        "title": "Asesoramiento en Logística Internacional",
+        "description": "Importación directa desde USA y distribución local."
+      },
+      {
+        "title": "WiFi & Telecomunicaciones",
+        "description": "Cobertura total con tecnología de última generación."
+      },
+      {
+        "title": "Catálogo de Productos",
+        "description": "Selección premium de las mejores marcas."
+      },
+      {
+        "title": "Tiempos de entrega JIT",
+        "description": "Entrega Just In Time para optimizar tu obra."
+      },
+      {
+        "title": "Sede Argentina & Warehouse en Miami",
+        "description": "Presencia local con stock internacional."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Transformamos tu hogar en un espacio inteligente, conectado y seguro.",
+    "solutions": "Soluciones",
+    "company": "Empresa",
+    "contact": "Contacto",
+    "privacy": "Políticas de Privacidad",
+    "rights": "Todos los derechos reservados."
+  },
+  "cta": {
+    "title": "¿Te gustaría convertir tu casa en una casa inteligente?",
+    "subtitle": "Tenemos un equipo de expertos que buscan soluciones específicas para cada hogar.",
+    "button": "Contactanos por WhatsApp"
+  },
+  "blog": {
+    "sectionTitle": "Blog",
+    "subtitle": "Noticias, tendencias y consejos sobre tecnología para el hogar",
+    "readMore": "Leer más"
+  },
+  "catalog": {
+    "title": "Catálogo de Productos",
+    "subtitle": "Explorá nuestra selección de productos premium"
+  },
+  "contact": {
+    "sectionTitle": "Contacto",
+    "title": "Hablemos sobre tu proyecto",
+    "subtitle": "Contanos qué necesitás y te ayudamos a encontrar la solución perfecta para tu hogar."
+  }
+}
