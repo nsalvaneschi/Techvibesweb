@@ -1,21 +1,25 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
 import { MapPin, Phone, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const ts = useTranslations('solutions');
+  const pathname = usePathname();
+  const currentLocale = pathname?.split('/')[1] || 'es';
+
+  const p = (path: string) => `/${currentLocale}${path}`;
 
   const solutions = [
-    { label: ts('ingenieria.title'), href: '/soluciones/ingenieria-de-planos' },
-    { label: ts('domotica.title'), href: '/soluciones/domotica' },
-    { label: ts('red.title'), href: '/soluciones/red-wifi' },
-    { label: ts('seguridad.title'), href: '/soluciones/seguridad' },
-    { label: ts('soporte.title'), href: '/soluciones/soporte-tecnico' },
-    { label: ts('audioVideo.title'), href: '/soluciones/audio-video' },
+    { label: ts('ingenieria.title'), href: p('/soluciones/ingenieria-de-planos') },
+    { label: ts('domotica.title'), href: p('/soluciones/domotica') },
+    { label: ts('red.title'), href: p('/soluciones/red-wifi') },
+    { label: ts('seguridad.title'), href: p('/soluciones/seguridad') },
+    { label: ts('soporte.title'), href: p('/soluciones/soporte-tecnico') },
+    { label: ts('audioVideo.title'), href: p('/soluciones/audio-video') },
   ];
 
   return (
@@ -23,7 +27,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3" aria-label="TechVibes Home">
+            <a href={p('')} className="flex items-center gap-3" aria-label="TechVibes Home">
               <Image
                 src="/images/TV_TLOGO06.png"
                 alt="TechVibes"
@@ -38,7 +42,7 @@ export default function Footer() {
                 height={36}
                 className="h-9 w-auto"
               />
-            </Link>
+            </a>
             <p className="mt-4 text-sm text-neutral-500 max-w-xs">{t('description')}</p>
             <div className="flex items-center gap-3 mt-6">
               <a
@@ -69,9 +73,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {solutions.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-neutral-500 hover:text-white transition-colors">
+                  <a href={item.href} className="text-sm text-neutral-500 hover:text-white transition-colors">
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -83,24 +87,24 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/quienes-somos" className="text-sm text-neutral-500 hover:text-white transition-colors">
+                <a href={p('/quienes-somos')} className="text-sm text-neutral-500 hover:text-white transition-colors">
                   {t('company')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-neutral-500 hover:text-white transition-colors">
+                <a href={p('/blog')} className="text-sm text-neutral-500 hover:text-white transition-colors">
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/marcas" className="text-sm text-neutral-500 hover:text-white transition-colors">
+                <a href={p('/marcas')} className="text-sm text-neutral-500 hover:text-white transition-colors">
                   Marcas
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/quienes-somos/politicas-de-privacidad" className="text-sm text-neutral-500 hover:text-white transition-colors">
+                <a href={p('/quienes-somos/politicas-de-privacidad')} className="text-sm text-neutral-500 hover:text-white transition-colors">
                   {t('privacy')}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

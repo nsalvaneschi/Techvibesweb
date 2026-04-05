@@ -1,71 +1,28 @@
 'use client';
 
-import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
-import { ArrowLeft, MessageCircle, FileText, CheckCircle2, Lightbulb, Users, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowLeft, MessageCircle, FileText, CheckCircle2 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { BlueprintIllustration } from '@/components/illustrations';
+import FeatureImageCard from '@/components/FeatureImageCard';
 
 const features = [
   {
-    icon: Lightbulb,
+    image: '/images/soluciones/ingenieria-planos.png',
     title: 'Diseño Integral',
     description: 'Coordinamos desde el principio la infraestructura necesaria con arquitectos e ingenieros.',
   },
   {
-    icon: Users,
+    image: '/images/soluciones/ingenieria-equipo.png',
     title: 'Trabajo en Equipo',
     description: 'Colaboración directa con arquitectos, ingenieros civiles y eléctricos.',
   },
   {
-    icon: TrendingUp,
+    image: '/images/soluciones/ingenieria-futuro.png',
     title: 'Pensado a Futuro',
     description: 'Desarrollos para tecnologías actuales y futuras, evitando obras posteriores.',
   },
 ];
-
-function FeatureCard({ icon: Icon, title, description, index }: {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-  index: number;
-}) {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 150, damping: 15 });
-  const springY = useSpring(mouseY, { stiffness: 150, damping: 15 });
-  const background = useMotionTemplate`radial-gradient(200px circle at ${springX}px ${springY}px, rgba(203, 212, 191, 0.06), transparent 80%)`;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-      onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        mouseX.set(e.clientX - rect.left);
-        mouseY.set(e.clientY - rect.top);
-      }}
-      className="group relative rounded-2xl overflow-hidden"
-    >
-      <motion.div
-        className="absolute inset-0 z-10"
-        style={{ background: background as unknown as string }}
-      />
-      <div className="relative z-20 p-8 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/5 group-hover:border-[#CBD4BF]/20 transition-all duration-500">
-        <motion.div
-          className="w-12 h-12 rounded-xl bg-[#CBD4BF]/10 flex items-center justify-center mb-5"
-          whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
-          transition={{ duration: 0.4 }}
-        >
-          <Icon size={22} className="text-[#A9C1A9]" />
-        </motion.div>
-        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#CBD4BF] transition-colors">{title}</h3>
-        <p className="text-sm text-neutral-400 leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  );
-}
 
 export default function IngenieriaPage() {
   return (
@@ -112,9 +69,9 @@ export default function IngenieriaPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {features.map((feature, index) => (
-                <FeatureCard
+                <FeatureImageCard
                   key={feature.title}
-                  icon={feature.icon}
+                  image={feature.image}
                   title={feature.title}
                   description={feature.description}
                   index={index}

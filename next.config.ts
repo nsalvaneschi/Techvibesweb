@@ -43,6 +43,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'shelly.cloud',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,

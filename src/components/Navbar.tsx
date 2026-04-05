@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Menu, X, Globe } from 'lucide-react';
-import { usePathname, useRouter, Link } from '@/i18n/navigation';
+import { usePathname } from '@/i18n/navigation';
 import Image from 'next/image';
 
 const LANG_NAMES: Record<string, string> = { es: 'ES', en: 'EN' };
@@ -11,7 +11,6 @@ const LANG_NAMES: Record<string, string> = { es: 'ES', en: 'EN' };
 export default function Navbar() {
   const t = useTranslations('nav');
   const pathname = usePathname();
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,32 +24,41 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
-  const currentLocale = pathname?.split('/')[1] || 'es';
+  // Extraer el idioma actual de la URL (ej: /es/marcas -> es)
+  const currentLocale = pathname?.startsWith('/es') || pathname?.startsWith('/en') 
+    ? pathname.split('/')[1] 
+    : 'es';
+  
   const alternateLocale = currentLocale === 'es' ? 'en' : 'es';
+  const isHomePage = pathname === '/' || pathname === `/${currentLocale}` || pathname === `/${currentLocale}/`;
 
-  const handleNavClick = (href: string) => {
-    if (href.startsWith('#')) {
-      if (pathname === '/' || pathname === `/${currentLocale}` || pathname === `/${currentLocale}/`) {
-        const el = document.querySelector(href);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        router.push('/');
-        setTimeout(() => {
-          const el = document.querySelector(href);
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
-      }
-    }
+  // Función para crear rutas absolutas con el idioma
+  const p = (path: string) => `/${currentLocale}${path}`;
+
+  const handleHashClick = (href: string) => {
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
   };
 
-  const navItems = [
-    { label: t('inicio'), href: '#inicio' },
-    { label: t('soluciones'), href: '#soluciones' },
-    { label: t('marcas'), href: '/marcas' },
-    { label: t('blog'), href: '/blog' },
-    { label: t('quienesSomos'), href: '/quienes-somos' },
-    { label: t('contacto' as any), href: '/contacto' },
-  ];
+  // Usamos rutas absolutas (/es/marcas) para evitar problemas de redirección
+  const navItems = isHomePage
+    ? [
+        { label: t('inicio'), href: '#inicio', isHash: true },
+        { label: t('soluciones'), href: '#soluciones', isHash: true },
+        { label: t('marcas'), href: p('/marcas'), isHash: false },
+        { label: t('blog'), href: p('/blog'), isHash: false },
+        { label: t('quienesSomos'), href: p('/quienes-somos'), isHash: false },
+        { label: t('contacto'), href: p('/contacto'), isHash: false },
+      ]
+    : [
+        { label: t('inicio'), href: p(''), isHash: false },
+        { label: t('soluciones'), href: p('/#soluciones'), isHash: false },
+        { label: t('marcas'), href: p('/marcas'), isHash: false },
+        { label: t('blog'), href: p('/blog'), isHash: false },
+        { label: t('quienesSomos'), href: p('/quienes-somos'), isHash: false },
+        { label: t('contacto'), href: p('/contacto'), isHash: false },
+      ];
 
   return (
     <header
@@ -60,7 +68,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link href="/" className="flex items-center gap-3" aria-label="TechVibes Home">
+          <a href={p('')} className="flex items-center gap-3" aria-label="TechVibes Home">
             <Image
               src="/images/TV_TLOGO06.png"
               alt="TechVibes"
@@ -77,26 +85,26 @@ export default function Navbar() {
               className="h-8 w-auto"
               priority
             />
-          </Link>
+          </a>
 
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              item.href.startsWith('#') ? (
+              item.isHash ? (
                 <button
                   key={item.href}
-                  onClick={() => handleNavClick(item.href)}
+                  onClick={() => handleHashClick(item.href)}
                   className="text-sm text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer"
                 >
                   {item.label}
                 </button>
               ) : (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
                   className="text-sm text-neutral-400 hover:text-white transition-colors duration-200"
                 >
                   {item.label}
-                </Link>
+                </a>
               )
             ))}
           </div>
@@ -135,26 +143,23 @@ export default function Navbar() {
         <div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-[#1a2618]">
           <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
-              item.href.startsWith('#') ? (
+              item.isHash ? (
                 <button
                   key={item.href}
-                  onClick={() => {
-                    handleNavClick(item.href);
-                    setIsOpen(false);
-                  }}
-                  className="block text-lg text-neutral-300 hover:text-white transition-colors cursor-pointer"
+                  onClick={() => handleHashClick(item.href)}
+                  className="block text-lg text-neutral-300 hover:text-white transition-colors cursor-pointer w-full text-left"
                 >
                   {item.label}
                 </button>
               ) : (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className="block text-lg text-neutral-300 hover:text-white transition-colors"
                 >
                   {item.label}
-                </Link>
+                </a>
               )
             ))}
             <a

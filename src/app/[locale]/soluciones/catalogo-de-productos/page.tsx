@@ -3,7 +3,21 @@
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import { ArrowLeft, MessageCircle, ExternalLink, Package } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import { brandCatalogs } from '@/lib/catalog-data';
+
+const brandLogos: Record<string, string> = {
+  'control4': '/images/brands/control4.png',
+  'sonos': '/images/brands/sonos.png',
+  'yale': '/images/brands/yale.svg',
+  'bond': '/images/brands/bond.png',
+  'denon': '/images/brands/denon.png',
+  'yamaha': '/images/brands/yamaha.jpg',
+  'tplink': '/images/brands/tplink.png',
+  'truaudio': '/images/brands/truaudio.png',
+  'vssl': '/images/brands/vssl.png',
+  'shelly': '/images/brands/shelly.png',
+};
 
 function BrandCard({ brand, index }: { brand: typeof brandCatalogs[0]; index: number }) {
   const mouseX = useMotionValue(0);
@@ -11,6 +25,7 @@ function BrandCard({ brand, index }: { brand: typeof brandCatalogs[0]; index: nu
   const springX = useSpring(mouseX, { stiffness: 150, damping: 15 });
   const springY = useSpring(mouseY, { stiffness: 150, damping: 15 });
   const background = useMotionTemplate`radial-gradient(200px circle at ${springX}px ${springY}px, rgba(203, 212, 191, 0.08), transparent 80%)`;
+  const logoSrc = brandLogos[brand.id];
 
   return (
     <motion.div
@@ -30,28 +45,42 @@ function BrandCard({ brand, index }: { brand: typeof brandCatalogs[0]; index: nu
           style={{ background: background as unknown as string }}
         />
         <motion.div
-          className="relative z-20 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/5 group-hover:border-[#CBD4BF]/20 transition-all duration-500 h-full p-8"
+          className="relative z-20 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/5 group-hover:border-[#CBD4BF]/20 transition-all duration-500 h-full"
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <div className="w-14 h-14 rounded-xl bg-[#CBD4BF]/10 flex items-center justify-center mb-6 group-hover:bg-[#CBD4BF]/20 transition-colors">
-            <Package size={26} className="text-[#A9C1A9]" />
+          <div className="flex items-center justify-center p-8 pb-4 bg-gradient-to-b from-[#CBD4BF]/5 to-transparent">
+            {logoSrc ? (
+              <Image
+                src={logoSrc}
+                alt={brand.name}
+                width={160}
+                height={60}
+                className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+              />
+            ) : (
+              <div className="w-14 h-14 rounded-xl bg-[#CBD4BF]/10 flex items-center justify-center">
+                <Package size={26} className="text-[#A9C1A9]" />
+              </div>
+            )}
           </div>
-          <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[#CBD4BF] transition-colors duration-300">
-            {brand.name}
-          </h3>
-          <p className="text-sm text-neutral-400 mb-4">{brand.description}</p>
-          <p className="text-xs text-[#A9C1A9] mb-4">
-            {brand.products.length} productos
-          </p>
-          <motion.span
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#A9C1A9] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <span className="px-4 py-2 rounded-full bg-[#CBD4BF]/10 border border-[#CBD4BF]/20 group-hover:bg-[#CBD4BF]/20 transition-colors">
-              Ver productos
-            </span>
-            <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.span>
+          <div className="px-8 pb-8">
+            <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#CBD4BF] transition-colors duration-300">
+              {brand.name}
+            </h3>
+            <p className="text-sm text-neutral-400 mb-3">{brand.description}</p>
+            <p className="text-xs text-[#A9C1A9] mb-4">
+              {brand.products.length} productos
+            </p>
+            <motion.span
+              className="inline-flex items-center gap-2 text-sm font-medium text-[#A9C1A9] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <span className="px-4 py-2 rounded-full bg-[#CBD4BF]/10 border border-[#CBD4BF]/20 group-hover:bg-[#CBD4BF]/20 transition-colors">
+                Ver productos
+              </span>
+              <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.span>
+          </div>
         </motion.div>
       </Link>
     </motion.div>
