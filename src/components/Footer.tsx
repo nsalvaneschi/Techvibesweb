@@ -46,7 +46,7 @@ export default function Footer() {
             <p className="mt-4 text-sm text-neutral-500 max-w-xs">{t('description')}</p>
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="https://www.instagram.com/techvibes_ar"
+                href="https://www.instagram.com/techvibes_ar/?hl=es-la"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full border border-white/10 text-neutral-400 hover:text-white hover:border-white/20 transition-all"

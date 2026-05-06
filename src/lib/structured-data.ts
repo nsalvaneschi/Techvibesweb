@@ -17,11 +17,11 @@ export const organizationSchema = {
     '@type': 'ContactPoint',
     telephone: '+54-9-11-3784-4697',
     contactType: 'customer service',
-    email: 'info@techvibes.com.ar',
+    email: 'info@techvibes.ar',
     availableLanguage: ['Spanish', 'English'],
   },
   sameAs: [
-    'https://www.instagram.com/techvibes_ar',
+    'https://www.instagram.com/techvibes_ar/?hl=es-la',
     'https://www.linkedin.com/company/techvibes-canning',
   ],
 };
