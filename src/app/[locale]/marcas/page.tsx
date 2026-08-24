@@ -11,6 +11,7 @@ const brandLogos = [
   { name: 'TruAudio', src: '/brands/truaudio.png', alt: 'TruAudio' },
   { name: 'Shelly', src: '/brands/shelly.png', alt: 'Shelly' },
   { name: 'Snap One', src: '/brands/snapone.png', alt: 'Snap One' },
+  { name: 'Araknis', src: '/brands/araknis.png', alt: 'Araknis Networks' },
   { name: 'Sonos', src: '/brands/sonos.png', alt: 'Sonos' },
   { name: 'VSSL', src: '/brands/vssl.png', alt: 'VSSL' },
   { name: 'Denon', src: '/brands/denon.png', alt: 'Denon' },
