@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import DynamicBackground from '@/components/DynamicBackground';
 import CursorFollower from '@/components/CursorFollower';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import { organizationSchema, localBusinessSchema, getServiceSchemas } from '@/lib/structured-data';
 import './globals.css';
 
 const inter = Inter({
@@ -79,6 +80,25 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        {getServiceSchemas().map(function(schema, index) {
+          return (
+            <script
+              key={index}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+          );
+        })}
+      </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         <DynamicBackground />
         <CursorFollower />

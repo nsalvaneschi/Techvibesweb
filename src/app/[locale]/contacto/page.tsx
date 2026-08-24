@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { MessageCircle, Mail, MapPin, Phone, Clock } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import RelatedPagesSection from '@/components/RelatedPagesSection';
+import FAQSection from '@/components/FAQSection';
 
 export default function ContactoPage() {
   const t = useTranslations('contact');
@@ -48,6 +49,13 @@ export default function ContactoPage() {
     { label: 'Red WiFi', href: '/soluciones/red-wifi', icon: 'Wifi' },
     { label: 'Audio & Video', href: '/soluciones/audio-video', icon: 'MonitorSpeaker' },
     { label: 'Marcas', href: '/marcas', icon: 'FileText' },
+  ];
+
+  const faqItems = [
+    {
+      question: '¿Cuál es el horario de atención?',
+      answer: 'Atendemos de lunes a viernes de 9:00 a 18:00 horas. También podés contactarnos por WhatsApp fuera de horario y te responderemos a la brevedad.',
+    },
   ];
 
   return (
@@ -136,6 +144,7 @@ export default function ContactoPage() {
           </motion.div>
         </div>
       </section>
+      <FAQSection items={faqItems} />
       <RelatedPagesSection pages={relatedPages} />
     </>
   );
