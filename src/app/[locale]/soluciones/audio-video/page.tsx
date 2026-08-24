@@ -24,8 +24,40 @@ const features = [
   },
 ];
 
+const audioVideoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Audio & Video',
+  description: 'Home Cinema y Audio Multiroom premium. Sonido envolvente Dolby Atmos, audio distribuido en cada ambiente, control desde app o voz. Integración con Sonos, Denon, Yamaha y más.',
+  url: 'https://www.techvibes.ar/es/soluciones/audio-video',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'Entertainment',
+  serviceType: 'Instalación de Home Cinema, audio multiroom, video portero IP, sistemas de intercomunicación',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'ARS',
+      minPrice: '100000',
+      maxPrice: '5000000',
+    },
+  },
+};
+
 export default function AudioVideoPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(audioVideoSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -138,5 +170,6 @@ export default function AudioVideoPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

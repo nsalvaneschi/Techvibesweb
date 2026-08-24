@@ -24,8 +24,40 @@ const features = [
   },
 ];
 
+const seguridadSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Seguridad Inteligente',
+  description: 'Protegemos lo que más te importa integrando sistemas de seguridad modernos y eficientes. Alarmas inteligentes, cámaras HD, cerraduras digitales con control desde tu celular.',
+  url: 'https://www.techvibes.ar/es/soluciones/seguridad',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'SecuritySystems',
+  serviceType: 'Instalación de alarmas, videovigilancia HD, cerraduras digitales y sistemas de control de acceso',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'ARS',
+      minPrice: '80000',
+      maxPrice: '3000000',
+    },
+  },
+};
+
 export default function SeguridadPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seguridadSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -138,5 +170,6 @@ export default function SeguridadPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

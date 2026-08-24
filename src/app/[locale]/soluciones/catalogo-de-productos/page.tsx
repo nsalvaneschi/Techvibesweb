@@ -19,6 +19,39 @@ const brandLogos: Record<string, string> = {
   'shelly': '/images/brands/shelly.png',
 };
 
+const catalogoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Catálogo de Productos Premium',
+  description: 'Catálogo completo de productos domóticos, audio, video, seguridad y redes de marcas líderes: Control4, Sonos, Yale, Denon, Yamaha, TP-Link, TruAudio, VSSL, Shelly, Bond y más. Acceso a Google Drive disponible.',
+  url: 'https://www.techvibes.ar/es/soluciones/catalogo-de-productos',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'ProductCatalog',
+  serviceType: 'Distribución y venta de productos domóticos, audio/video, seguridad, redes y automatización de marcas premium',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Catálogo TechVibes',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Control4' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Sonos' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Yale' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Bond' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Denon' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Yamaha' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'TP-Link' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'TruAudio' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'VSSL' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Shelly' } },
+    ],
+  },
+};
+
 function BrandCard({ brand, index }: { brand: typeof brandCatalogs[0]; index: number }) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -89,6 +122,11 @@ function BrandCard({ brand, index }: { brand: typeof brandCatalogs[0]; index: nu
 
 export default function CatalogoPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogoSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -153,5 +191,6 @@ export default function CatalogoPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

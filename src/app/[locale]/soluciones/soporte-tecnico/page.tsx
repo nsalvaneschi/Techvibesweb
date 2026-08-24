@@ -24,8 +24,40 @@ const features = [
   },
 ];
 
+const soporteTecnicoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Soporte Técnico Especializado',
+  description: 'Soporte técnico presencial y remoto para domótica, audio profesional y telecomunicaciones. Guardias activas, atención prioritaria, +10 años de experiencia. Canning, San Isidro y zona norte.',
+  url: 'https://www.techvibes.ar/es/soluciones/soporte-tecnico',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'TechnicalSupport',
+  serviceType: 'Mantenimiento preventivo, soporte remoto, guardias activas, actualizaciones de firmware y configuración de sistemas smart home',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'ARS',
+      minPrice: '15000',
+      maxPrice: '500000',
+    },
+  },
+};
+
 export default function SoporteTecnicoPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(soporteTecnicoSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -138,5 +170,6 @@ export default function SoporteTecnicoPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

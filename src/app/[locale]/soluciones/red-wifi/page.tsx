@@ -24,8 +24,40 @@ const features = [
   },
 ];
 
+const redWifiSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Red WiFi y Telecomunicaciones',
+  description: 'Diseñamos e implementamos redes WiFi y soluciones de telecomunicaciones con cobertura total, alta velocidad y máxima estabilidad. Estudios de cobertura, cableado estructurado, Access Points empresariales.',
+  url: 'https://www.techvibes.ar/es/soluciones/red-wifi',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'NetworkService',
+  serviceType: 'Diseño e instalación de redes WiFi mesh, cableado estructurado Cat6+, Access Points UniFi, segmentación de red',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'ARS',
+      minPrice: '50000',
+      maxPrice: '2000000',
+    },
+  },
+};
+
 export default function RedWifiPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(redWifiSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -138,5 +170,6 @@ export default function RedWifiPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

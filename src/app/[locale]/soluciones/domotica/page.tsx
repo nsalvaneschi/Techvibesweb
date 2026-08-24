@@ -24,8 +24,40 @@ const features = [
   },
 ];
 
+const domoticaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Domótica Profesional',
+  description: 'La domótica permite automatizar y centralizar el control de los distintos sistemas del hogar, desde una app o control remoto. Incluye diseño, instalación, configuración, soporte y post-venta.',
+  url: 'https://www.techvibes.ar/es/soluciones/domotica',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'HomeAutomation',
+  serviceType: 'Instalación y configuración de sistemas KNX, Control4, Lutron, Wiser y automatización integral',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'ARS',
+      minPrice: '50000',
+      maxPrice: '5000000',
+    },
+  },
+};
+
 export default function DomoticaPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(domoticaSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -138,5 +170,6 @@ export default function DomoticaPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

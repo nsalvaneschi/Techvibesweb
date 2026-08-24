@@ -24,8 +24,40 @@ const features = [
   },
 ];
 
+const ingenieriaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'TechVibes - Ingeniería de Proyectos Domóticos',
+  description: 'Diseño integral de infraestructura tecnológica para obras nuevas y reformas. Coordinación con arquitectos e ingenieros, planificación de cañerías, bandejas, racks, puntos WiFi, cámaras y tableros domóticos.',
+  url: 'https://www.techvibes.ar/es/soluciones/ingenieria-de-planos',
+  provider: {
+    '@type': 'Organization',
+    name: 'TechVibes',
+    url: 'https://www.techvibes.ar',
+    logo: 'https://www.techvibes.ar/images/TV_TLOGO06.png',
+  },
+  areaServed: 'Buenos Aires, Argentina',
+  category: 'ProfessionalService',
+  serviceType: 'Ingeniería de proyectos, diseño de infraestructura tecnológica, coordinación con arquitectos, planificación de instalaciones domóticas',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'ARS',
+      minPrice: '50000',
+      maxPrice: '800000',
+    },
+  },
+};
+
 export default function IngenieriaPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ingenieriaSchema) }}
+      />
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -138,5 +170,6 @@ export default function IngenieriaPage() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
